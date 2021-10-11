@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)file:///D:/hyperledger/EY%20CV/web/candidateDashboard/candidateDashboard.html -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="file:///D:/hyperledger/EY%20CV/web/images/fevicon.jpg">
+  <title>skillCheck</title>
+  <link rel="stylesheet" href="./employerDashboard_files/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./employerDashboard_files/bootstrap.min.css">
+  <link href="./employerDashboard_files/slick.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./employerDashboard_files/style.css">
+</head>
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  function verified() {
+        window.open("./../common/verified/verified.html"); 
+    }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .dropbtn {
+    background-color: #d5e0e7;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #9bccec;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown a:hover {
+    background-color: #ddd;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
+
+<body data-new-gr-c-s-check-loaded="14.1032.0" data-gr-ext-installed="">
+
+  <div class="wrapper">
+
+    <div class="header clearfix">
+      <div class="container clearfix">
+        <div class="logo">
+          <a href="https://en.echolink.info/index.html"><img src="./employerDashboard_files/logo.jpg"
+              class="img-fluid"></a>
+        </div>
+        <div class="navigation">
+          <div class="navicon">
+            <a href="JavaScript:void(0);" class="mobile-icon">
+              <span></span>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href="./../home/home.html" class="active">Home</a>
+            </li>
+            <li>
+              <a href="./../home/home.html">FAQ</a>
+            </li>
+            <li>
+              <a href="./../home/home.html">About Us</a>
+            </li>
+            <li>
+              <a href="./../our-team/ourteam.html">Our Team</a>
+            </li>
+            <li>
+              <a href="./../home/home.html">Sign Out</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-height-space" style="min-height: 0px;"></div>
+
+
+    <div class="dashboard-heading" style="padding-top: 25px;padding-bottom: 15px;">
+      <div class="container">
+        <h1>Verify Certificates</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container" id="registration" style="display:block;margin-top: 100px;margin-bottom: 100px;">
+
+    <div class="col-md-6 order-md-1" style="margin-left: 300px;">
+      <div class="mb-3">
+        <label for="account-number"><b>Username</b></label>
+        <div class="input-group account-number">
+            <input type="text" class="form-control" id="account-number" placeholder="" required="">
+            <div class="invalid-feedback" style="width: 100%;">
+                ID is required.
+            </div>
+        </div>
+        <small class="text-muted">Minimum six digits</small>
+    </div>
+      <div class="mb-3">
+        <label for="account-number"><b>Certificate ID</b></label>
+        <div class="input-group account-number">
+          <input type="text" class="form-control" id="account-number" placeholder="" required="">
+          <div class="invalid-feedback" style="width: 100%;">
+            ID is required.
+          </div>
+        </div>
+        <small class="text-muted">Minimum six digits</small>
+      </div>
+
+      <div class="mb-3">
+        <label for="card-id"><b>Cetificate Authorizing Organization</b><span class="text-muted"> (access id for your
+            account)</span></label>
+        <div class="input-group card-id">
+          <input type="text" class="form-control" id="card-id" placeholder="" required="">
+          <div class="invalid-feedback" style="width: 100%;">
+            ID is required.
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="card-id"><b>Certificate Type</b</label>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn"style="
+          padding-top: 2px;
+          padding-bottom: 2px;
+      ">Certificate Type</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Skills</a>
+            <a href="#about">Internship</a>
+            <a href="#contact">Work Experience</a>
+            <a href="#contact">Volunteer</a>
+            <a href="#contact">Other</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="card-id"><b>Expertise of Certificate</b></label>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn"style="
+          padding-top: 2px;
+          padding-bottom: 2px;
+      ">Level</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Beginner</a>
+            <a href="#about">Intermediate</a>
+            <a href="#contact">Advanced</a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <form action="/action_page.php">
+          <label for="myfile">Upload Certificate</label>
+          <input type="file" id="myfile" name="myfile"><br><br>
+        </form>
+      </div>
+      <div>
+        <hr class="mb-4">
+        <button onclick="verified()" class="btn btn-primary btn-lg btn-block register-member" type="submit">Verify Certificate</button>
+      </div>
+
+    </div>
+    <hr class="featurette-divider">
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="https://en.echolink.info/team.html#"><img src="./employerDashboard_files/logo.PNG" alt=""></a>
+      </div>
+      <div class="social-icon">
+        <a href="https://www.reddit.com/r/EchoLinkInfo/" target="_blank"><i class="fab fa-reddit-alien"></i></a>
+        <a href="https://twitter.com/echolinkinfo1?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/EchoLinkTech" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:support@echolink.tech" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://t.me/EcholinkOfficial" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+      <p class="footer-tagline">Blockchain based CV</p>
+      <div class="footer-copyright">
+        Copyright : copyright: 2021-2025 All rights reserved, EY.
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./employerDashboard_files/jquery-1.12.4.min.js.download"></script>
+  <script src="./employerDashboard_files/slick.min.js.download"></script>
+  <script src="./employerDashboard_files/script.js.download"></script>
+
+  <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+
+</body>
+
+</html>

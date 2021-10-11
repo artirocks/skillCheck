@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///D:/hyperledger/EY%20CV/web/resgisterEmployer/registerEmployer.html -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../images/fevicon.jpg">
+  <title>skillCheck</title>
+  <link rel="stylesheet" href="./registerIssuer_files/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./registerIssuer_files/bootstrap.min.css">
+  <link href="./registerIssuer_files/slick.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./registerIssuer_files/style.css">
+</head>
+
+<script>
+  function welcome() {
+    window.open("./../SuccessfullyRegistered/Issuer/SuccessfullyRegistered.html");
+  }
+</script>
+
+<body data-new-gr-c-s-check-loaded="14.1032.0" data-gr-ext-installed="">
+
+  <div class="wrapper">
+
+    <div class="header clearfix">
+      <div class="container clearfix">
+        <div class="logo">
+          <a href="./../home/home.html"><img src="../images/logo.jpg" class="img-fluid"></a>
+        </div>
+        <div class="navigation">
+          <div class="navicon">
+            <a href="JavaScript:void(0);" class="mobile-icon">
+              <span></span>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href="./../home/home.html" class="active">Home</a>
+            </li>
+            <li>
+              <a href="./../home/home.html">FAQ</a>
+            </li>
+            <li>
+              <a href="./../home/home.html">About Us</a>
+            </li>
+            <li>
+              <a href="./../our-team/ourteam.html">Our Team</a>
+            </li>
+            <li>
+              <a>Sign In <span class="dropdown"><i class="fa fa-angle-down"></i></span></a>
+              <div class="has-menu">
+                <ul>
+                  <li>
+                    <a href="./../signInCandidate/signInCandidate.html">Candidate</a>
+                  </li>
+                  <li>
+                    <a href="./../signInIssuer/signInIssuer.html">Issuer</a>
+                  </li>
+                  <li>
+                    <a href="./../signInEmployer/signInEmployer.html">Employer</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a>Register<span class="dropdown"><i class="fa fa-angle-down"></i></span></a>
+              <div class="has-menu">
+                <ul>
+                  <li>
+                    <a href="./../registerCandidate/registerCandidate.html">Candidate</a>
+                  </li>
+                  <li>
+                    <a href="./../registerIssuer/registerIssuer.html">Issuer</a>
+                  </li>
+                  <li>
+                    <a href="./../resgisterEmployer/registerEmployer.html">Employer</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-height-space" style="min-height: 0px;"></div>
+
+
+    <div class="breadcrumbs-wrap">
+      <div class="breadcrumbs-banner">
+        <div class="breadcrumbs-head"><span>Certificate Issuer</span></div>
+
+      </div>
+      <div class="breadcrumbs-links">
+        <ul>
+          <li>
+            <a>Register as Certificate Issuer</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container" id="registration" style="display:block;margin-top: 100px;margin-bottom: 100px;">
+
+      <div class="col-md-6 order-md-1" style="margin-left: 300px;">
+        <div class="mb-3">
+          <label for="account-number"><b>Username </b><span class="text-muted"> (identification on the
+              network)</span></label>
+          <div class="input-group account-number">
+            <input type="text" class="form-control" id="account-number" placeholder="" required="">
+            <div class="invalid-feedback" style="width: 100%;">
+              ID is required.
+            </div>
+          </div>
+          <small class="text-muted">Minimum six digits</small>
+        </div>
+
+        <div class="mb-3">
+          <label for="card-id"><b>Org Access ID </b><span class="text-muted"> (access id for your
+              account)</span></label>
+          <div class="input-group card-id">
+            <input type="text" class="form-control" id="card-id" placeholder="" required="">
+            <div class="invalid-feedback" style="width: 100%;">
+              ID is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="card-id"><b>Company Name</b></label>
+          <div class="input-group card-id">
+            <input type="text" class="form-control" id="card-id" placeholder="" required="">
+            <div class="invalid-feedback" style="width: 100%;">
+              ID is required.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <hr class="mb-4">
+          <button onclick="welcome()" class="btn btn-primary btn-lg btn-block register-member" type="submit">Register</button>
+        </div>
+
+      </div>
+      <hr class="featurette-divider">
+    </div>
+
+    <div class="container text-center">
+      <div class="loader" id="loader" style="display:none;"></div>
+    </div>
+
+    <div class="container text-center" id="successful-registration" style="display:none;">
+      <h4>successfully registered on the blockchain network</h4>
+      <div class="row" style="display:block;">
+        <br>
+        <div><a class="btn btn-primary" href="file:///D:/member" role="button">Candidate Sign In »</a></div>
+        <br>
+        <div><a class="btn btn-primary" href="file:///D:/home" role="button">Home »</a></div>
+      </div>
+      <hr class="featurette-divider">
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <a href="https://en.echolink.info/team.html#"><img src="../images/logo.PNG" alt=""></a>
+        </div>
+        <div class="social-icon">
+          <a href="https://www.reddit.com/r/EchoLinkInfo/" target="_blank"><i class="fab fa-reddit-alien"></i></a>
+          <a href="https://twitter.com/echolinkinfo1?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/EchoLinkTech" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:support@echolink.tech" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a href="https://t.me/EcholinkOfficial" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+        <p class="footer-tagline">Blockchain based CV</p>
+        <div class="footer-copyright">
+          Copyright : copyright: 2021-2025 All rights reserved, EY.
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./registerIssuer_files/jquery-1.12.4.min.js.download"></script>
+  <script src="./registerIssuer_files/slick.min.js.download"></script>
+  <script src="./registerIssuer_files/script.js.download"></script>
+
+  <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</body>
+
+</html>

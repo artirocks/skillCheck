@@ -1,0 +1,44 @@
+[
+    {
+        "transactionName": "customerLoyalityExists",
+        "transactionLabel": "A test customerLoyalityExists transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "createCustomerLoyality",
+        "transactionLabel": "A test createCustomerLoyality transaction",
+        "arguments": [
+            "001",
+            "some value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "readCustomerLoyality",
+        "transactionLabel": "A test readCustomerLoyality transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "updateCustomerLoyality",
+        "transactionLabel": "A test updateCustomerLoyality transaction",
+        "arguments": [
+            "001",
+            "some other value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "deleteCustomerLoyality",
+        "transactionLabel": "A test deleteCustomerLoyality transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    }
+]

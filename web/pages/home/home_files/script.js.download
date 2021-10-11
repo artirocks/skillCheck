@@ -1,0 +1,199 @@
+// Developer left navigation
+function stickyLeftNav(){
+	if(jQuery(".developers-left").length > 0 && jQuery(window).width() > 767){
+		var $docScrollTop = jQuery(document).scrollTop(),
+			$leftPanelTop = jQuery(".developers-left-nav-wrap").offset().top,
+			$leftPanelBottom = $leftPanelTop + jQuery(".developers-content").outerHeight() - jQuery(".developers-left").outerHeight(),
+			$header = jQuery(".header").outerHeight(),
+			$stickyTopPosition;
+		if( $docScrollTop < $leftPanelBottom - $header ){
+			$stickyTopPosition =  $docScrollTop - $leftPanelTop + $header;
+			if($stickyTopPosition < 0) $stickyTopPosition = 0;
+		}else{
+			$stickyTopPosition = jQuery(".developers-content").outerHeight() - jQuery(".developers-left").outerHeight() - 20
+		}
+		jQuery(".developers-left").css("top", $stickyTopPosition);
+	}
+}
+
+// Developer Right navigation
+function stickyRightNav(){
+	if(jQuery(".onpagenav").length > 0 && jQuery(window).width() > 767){
+		var $docScrollTop = jQuery(document).scrollTop(),
+			$rightPanelTop = jQuery(".onpagenav-wrap").offset().top,
+			$rightPanelBottom = $rightPanelTop + jQuery(".developers-content").outerHeight() - jQuery(".onpagenav").outerHeight(),
+			$header = jQuery(".header").outerHeight(),
+			$stickyTopPosition;
+		if( $docScrollTop < $rightPanelBottom - $header ){
+			$stickyTopPosition =  $docScrollTop - $rightPanelTop + $header;
+			if($stickyTopPosition < 0) $stickyTopPosition = 0;
+		}else{
+			$stickyTopPosition = jQuery(".developers-content").outerHeight() - jQuery(".onpagenav").outerHeight() - 20
+		}
+		jQuery(".onpagenav").css("top", $stickyTopPosition);
+	}
+}
+
+$(document).ready(function(){
+	$(".navicon").click(function(){
+		$(".navigation > ul").toggleClass("menu");
+	});
+	$(".mobile-icon").click(function(){
+		$(this).toggleClass("open");
+		$(".menu").toggleClass("open")
+		$("body").toggleClass("open")
+	});
+	
+	$(".header ul > li > a > .dropdown").click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).closest("li").find(".has-menu").toggleClass("mobilesubmenu");
+	});
+
+	// developers page start
+	$(".nav-developers").click(function(){
+		$(".onpagenav").removeClass("menu");
+		$(".nav-onpagenav").removeClass("close-icon");
+		$(".developers-left").toggleClass("menu");
+		$(".nav-developers").toggleClass("close-icon");
+		// $("body").toggleClass("overflow-hidden");
+	});
+	$(".nav-onpagenav").click(function(){
+		$(".developers-left").removeClass("menu");
+		$(".nav-developers").removeClass("close-icon");
+		$(".onpagenav").toggleClass("menu");
+		$(".nav-onpagenav").toggleClass("close-icon");
+		// $("body").toggleClass("overflow-hidden");
+	});
+
+
+	// Select and loop the container element of the elements you want to equalise
+	$('.services').each(function(){
+		var highestBox = 0;
+		$('.services-wrap', this).each(function(){
+			if($(this).height() > highestBox) {
+				highestBox = $(this).height(); 
+			}
+		});
+		$('.services-wrap',this).height(highestBox);
+	});
+
+	$('.coin-content').each(function(){
+		var highestBox = 0;
+		$('.coin-content-box', this).each(function(){
+			if($(this).height() > highestBox) {
+				highestBox = $(this).height(); 
+			}
+		});
+		$('.coin-content-box',this).height(highestBox);
+	});
+ 
+	$('.team-staff-wrap').each(function(){
+		var highestBox = 0;
+		$('.staff-member', this).each(function(){
+			if($(this).height() > highestBox) {
+				highestBox = $(this).height(); 
+			}
+		});
+		$('.staff-member',this).height(highestBox);
+	});
+
+	// Roadmap Slider Start (HOME PAGE)
+	$(".roadmap-slider-slick").slick({
+		dots: false,
+		slidesToShow: 3,
+		arrows: false,
+		slidesToScroll: 1,
+		autoplay: true,
+		asNavFor: '.roadmap-slider-content',
+		autoplaySpeed: 2000,
+ 		responsive: [
+			{
+			  breakpoint: 991,
+			  settings: {
+				slidesToShow: 3
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 1
+			  }
+			}
+		]
+ 	});
+	
+	$(".roadmap-slider-content").slick({
+		nextArrow: '<span class="right-arrow"><img src="./images/arrow-right-slide-blackr.png" alt="slider"></span>',
+		prevArrow: '<span class="left-arrow"><img src="./images/arrow-slider.png" alt="slider"></span>',
+		dots: false,
+		slidesToShow: 1,
+ 		slidesToScroll: 1,
+		asNavFor: '.roadmap-slider-slick'
+  	});
+	
+	// PARTNERS SLIDER
+	$(".partners-slider-wrap").slick({
+		nextArrow: '<span class="right-arrow"><img src="./images/arrow-slider.png" alt="slider"></span>',
+		prevArrow: '<span class="left-arrow"><img src="./images/arrow-slider.png" alt="slider"></span>',
+		dots: false,
+		slidesToShow: 3,
+ 		slidesToScroll: 1,
+		vertical: true,
+		infinite: false
+  	});
+	
+	//  Client Testimonial Start
+	$(".testimonial-wrap").slick({
+		nextArrow: '<span class="right-arrow"><img src="./images/arrow-right-slider.png" alt="slider"></span>',
+		prevArrow: '<span class="left-arrow"><img src="./images/arrow-left-slider.png" alt="slider"></span>',
+		dots: false,
+		slidesToShow: 1,
+ 		slidesToScroll: 1,
+  	});
+	
+	// blog js start
+	$(".publication-blog").slick({
+		nextArrow: '<span class="right-arrow"><img src="./images/arrow-right-slider.png" alt="slider"></span>',
+		prevArrow: '<span class="left-arrow"><img src="./images/arrow-left-slider.png" alt="slider"></span>',
+		dots: false,
+		slidesToShow: 1,
+ 		slidesToScroll: 1,
+  	});
+	
+	// Developer page section scroll 
+	if(jQuery(".onpagenav").length > 0){
+		jQuery(".onpagenav a").click(function(e){
+			e.preventDefault();
+			var section = jQuery(this).attr("href");
+			$header = jQuery(".header").outerHeight();
+			jQuery('html, body').animate({
+				scrollTop: $(section).offset().top - $header
+			}, 800);
+		});
+	}
+	stickyLeftNav();
+	stickyRightNav();
+	stickyHeader()
+});
+ 
+// Sticky Header Start
+function stickyHeader(){
+	var scrollTo = $(window).scrollTop();
+	var header_height = $(".header").outerHeight();
+	if (scrollTo >= 80){
+		$(".header").addClass("sticky");
+		$(".header-height-space").css("min-height", header_height);}
+	else{
+		$(".header").removeClass("sticky");
+		$(".header-height-space").css("min-height", 0);
+	}
+}
+
+ $(window).scroll(function(){
+	stickyLeftNav();
+	stickyRightNav();
+	stickyHeader();
+});
+ 
+
